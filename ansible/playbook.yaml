@@ -11,7 +11,7 @@
     data_path: "{{ data_dir }}/notes.json"
     seed_path: "{{ data_dir }}/seed.json"
     listen_addr: ":8080"
-    restart_delay: 4
+    restart_delay: 5
 
   tasks:
     - name: Create QuickNotes system group
