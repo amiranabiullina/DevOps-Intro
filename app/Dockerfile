@@ -20,12 +20,15 @@ RUN CGO_ENABLED=0 GOOS=linux go build \
     mkdir -p /out/data && \
     chown 65532:65532 /out/data
 
+RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/healthcheck ./cmd/healthcheck
+
 # ---- Runtime stage ----
 FROM gcr.io/distroless/static:nonroot
 
 WORKDIR /app
 
 COPY --from=builder /out/quicknotes /app/quicknotes
+COPY --from=builder /out/healthcheck /app/healthcheck
 COPY --from=builder /src/seed.json /app/seed.json
 COPY --from=builder --chown=65532:65532 /out/data /data
 
