@@ -1,0 +1,83 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* Host bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev:443 was resolved.
+* IPv6: (none)
+* IPv4: 20.103.221.187
+*   Trying 20.103.221.187:443...
+* Connected to bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev (20.103.221.187) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [357 bytes data]
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [41 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [3931 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / AEAD-AES256-GCM-SHA384 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Redmond; O=Microsoft Corporation; CN=app.github.dev
+*  start date: Sep 12 00:00:00 2026 GMT
+*  expire date: Mar 11 23:59:59 2027 GMT
+*  subjectAltName: host "bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev" matched cert's "*.app.github.dev"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev/health
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev]
+* [HTTP/2] [1] [:path: /health]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET /health HTTP/2
+> Host: bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< date: Thu, 08 Oct 2026 20:11:03 GMT
+< content-type: application/json
+< content-length: 26
+< cache-control: no-cache,no-store
+< cache-control: no-store
+< expires: Thu, 01 Jan 1970 00:00:00 GMT
+< pragma: no-cache
+< set-cookie: .Tunnels.Relay.WebForwarding.Cookies=<redacted>; path=/; secure; samesite=none; Partitioned
+< x-content-type-options: nosniff
+< x-content-type-options: nosniff
+< ratelimit-limit: HttpRequestRatePerPort:1500/m
+< ratelimit-limit: ClientConnectionsPerPort: max 1000
+< ratelimit-remaining: HttpRequestRatePerPort:1499
+< ratelimit-remaining: ClientConnectionsPerPort:999
+< ratelimit-reset: HttpRequestRatePerPort:24s
+< x-report-abuse: https://msrc.microsoft.com/report/abuse
+< x-ms-ratelimit-limit: 1500
+< x-ms-ratelimit-remaining: 1498
+< x-ms-ratelimit-used: 2
+< x-ms-ratelimit-reset: 0
+< content-security-policy: default-src 'none'; frame-ancestors 'none'
+< cross-origin-embedder-policy: require-corp
+< cross-origin-opener-policy: same-origin
+< cross-origin-resource-policy: same-origin
+< x-frame-options: DENY
+< x-robots-tag: noindex, nofollow
+< referrer-policy: same-origin
+< vssaas-request-id: 26e503d5-ea61-4864-937a-15f0e29f44fc
+< strict-transport-security: max-age=31536000; includeSubDomains
+< x-served-by: tunnels-prod-rel-euw-v3-cluster
+< 
+{ [26 bytes data]
+100    26  100    26    0     0     19      0  0:00:01  0:00:01 --:--:--    19100    26  100    26    0     0     19      0  0:00:01  0:00:01 --:--:--    19
+* Connection #0 to host bug-free-spork-7v4x45jp597x3w5wv-8080.app.github.dev left intact
+{"notes":4,"status":"ok"}
