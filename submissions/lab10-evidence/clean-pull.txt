@@ -1,0 +1,59 @@
+v0.1.0: Pulling from amiranabiullina/devops-intro/quicknotes
+c172f21841df: Pulling fs layer
+b98e6b1d104d: Pulling fs layer
+ebddc55facdc: Pulling fs layer
+e7ea2b714752: Pulling fs layer
+a706039c2dee: Pulling fs layer
+3f6e289b8930: Pulling fs layer
+dd64bf2dd177: Pulling fs layer
+2cc7ee286bf3: Pulling fs layer
+7c12895b777b: Pulling fs layer
+3214acf345c0: Pulling fs layer
+b839dfae01f6: Pulling fs layer
+2780920e5dbf: Pulling fs layer
+218cf840d0d9: Pulling fs layer
+52630fc75a18: Pulling fs layer
+d6b1b89eccac: Pulling fs layer
+c4bc6f35ff5e: Pulling fs layer
+f6069939f718: Pulling fs layer
+7c12895b777b: Already exists
+b839dfae01f6: Already exists
+d6b1b89eccac: Already exists
+c172f21841df: Already exists
+dd64bf2dd177: Already exists
+52630fc75a18: Already exists
+3214acf345c0: Already exists
+218cf840d0d9: Already exists
+ebddc55facdc: Already exists
+f6069939f718: Already exists
+2780920e5dbf: Already exists
+2cc7ee286bf3: Download complete
+d6b1b89eccac: Pull complete
+c172f21841df: Pull complete
+218cf840d0d9: Pull complete
+f6069939f718: Pull complete
+2780920e5dbf: Pull complete
+2cc7ee286bf3: Pull complete
+3f6e289b8930: Download complete
+e7ea2b714752: Download complete
+7c12895b777b: Pull complete
+b839dfae01f6: Pull complete
+dd64bf2dd177: Pull complete
+52630fc75a18: Pull complete
+3214acf345c0: Pull complete
+ebddc55facdc: Pull complete
+b98e6b1d104d: Download complete
+c4bc6f35ff5e: Download complete
+b98e6b1d104d: Pull complete
+c4bc6f35ff5e: Pull complete
+a706039c2dee: Download complete
+3f6e289b8930: Pull complete
+e7ea2b714752: Pull complete
+a706039c2dee: Pull complete
+Digest: sha256:b967859349a6d40e416d7e4d3667c01afa1e53f12f3cfe4f54519cb2a2d1b56f
+Status: Downloaded newer image for ghcr.io/amiranabiullina/devops-intro/quicknotes:v0.1.0
+ghcr.io/amiranabiullina/devops-intro/quicknotes:v0.1.0
+latest: Pulling from amiranabiullina/devops-intro/quicknotes
+Digest: sha256:b967859349a6d40e416d7e4d3667c01afa1e53f12f3cfe4f54519cb2a2d1b56f
+Status: Downloaded newer image for ghcr.io/amiranabiullina/devops-intro/quicknotes:latest
+ghcr.io/amiranabiullina/devops-intro/quicknotes:latest
