@@ -26,7 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         go-version:
-          - "1.23"
+          - "1.26.9"
           - "1.24"
 
     steps:
@@ -61,7 +61,7 @@ jobs:
       fail-fast: false
       matrix:
         go-version:
-          - "1.23"
+          - "1.26.9"
           - "1.24"
 
     steps:
@@ -121,7 +121,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.24"
+          go-version: "1.26.9"
           cache: false
 
       - name: Install pinned govulncheck
