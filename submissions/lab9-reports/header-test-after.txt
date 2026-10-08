@@ -1,0 +1,36 @@
+=== RUN   TestHealth_ReportsCount
+--- PASS: TestHealth_ReportsCount (0.00s)
+=== RUN   TestCreateNote_RoundTrip
+--- PASS: TestCreateNote_RoundTrip (0.00s)
+=== RUN   TestCreateNote_RejectsEmptyTitle
+--- PASS: TestCreateNote_RejectsEmptyTitle (0.00s)
+=== RUN   TestCreateNote_RejectsUnknownField
+--- PASS: TestCreateNote_RejectsUnknownField (0.00s)
+=== RUN   TestGetNote_NotFound
+--- PASS: TestGetNote_NotFound (0.00s)
+=== RUN   TestDeleteNote_RemovesAndReturns204
+--- PASS: TestDeleteNote_RemovesAndReturns204 (0.00s)
+=== RUN   TestMetrics_ExposesPrometheusFormat
+--- PASS: TestMetrics_ExposesPrometheusFormat (0.00s)
+=== RUN   TestSecurityHeadersOnRoutes
+=== RUN   TestSecurityHeadersOnRoutes//health
+=== RUN   TestSecurityHeadersOnRoutes//notes
+=== RUN   TestSecurityHeadersOnRoutes//metrics
+=== RUN   TestSecurityHeadersOnRoutes//notes/999
+=== RUN   TestSecurityHeadersOnRoutes//does-not-exist
+--- PASS: TestSecurityHeadersOnRoutes (0.00s)
+    --- PASS: TestSecurityHeadersOnRoutes//health (0.00s)
+    --- PASS: TestSecurityHeadersOnRoutes//notes (0.00s)
+    --- PASS: TestSecurityHeadersOnRoutes//metrics (0.00s)
+    --- PASS: TestSecurityHeadersOnRoutes//notes/999 (0.00s)
+    --- PASS: TestSecurityHeadersOnRoutes//does-not-exist (0.00s)
+=== RUN   TestStore_CreateAndGet
+--- PASS: TestStore_CreateAndGet (0.00s)
+=== RUN   TestStore_NextIDIncrements
+--- PASS: TestStore_NextIDIncrements (0.00s)
+=== RUN   TestStore_Delete
+--- PASS: TestStore_Delete (0.00s)
+=== RUN   TestStore_PersistsAcrossReload
+--- PASS: TestStore_PersistsAcrossReload (0.00s)
+PASS
+ok  	quicknotes	0.004s

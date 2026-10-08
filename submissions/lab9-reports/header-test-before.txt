@@ -1,0 +1,17 @@
+=== RUN   TestSecurityHeadersOnRoutes
+=== RUN   TestSecurityHeadersOnRoutes//health
+    security_headers_test.go:28: X-Content-Type-Options: got "", want "nosniff"
+=== RUN   TestSecurityHeadersOnRoutes//notes
+    security_headers_test.go:28: X-Content-Type-Options: got "", want "nosniff"
+=== RUN   TestSecurityHeadersOnRoutes//metrics
+    security_headers_test.go:28: X-Content-Type-Options: got "", want "nosniff"
+=== RUN   TestSecurityHeadersOnRoutes//notes/999
+    security_headers_test.go:28: X-Content-Type-Options: got "", want "nosniff"
+--- FAIL: TestSecurityHeadersOnRoutes (0.00s)
+    --- FAIL: TestSecurityHeadersOnRoutes//health (0.00s)
+    --- FAIL: TestSecurityHeadersOnRoutes//notes (0.00s)
+    --- FAIL: TestSecurityHeadersOnRoutes//metrics (0.00s)
+    --- FAIL: TestSecurityHeadersOnRoutes//notes/999 (0.00s)
+FAIL
+FAIL	quicknotes	0.002s
+FAIL

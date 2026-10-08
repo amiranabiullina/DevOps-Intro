@@ -1,0 +1,33 @@
+Unable to find image 'golang:1.26.9' locally
+1.26.9: Pulling from library/golang
+4f4fb700ef54: Pulling fs layer
+df9831efb49c: Pulling fs layer
+86f385aa2c76: Pulling fs layer
+a7f73cdbf7c7: Pulling fs layer
+d1a575944d54: Pulling fs layer
+d035f39de3c6: Pulling fs layer
+ad1180169676: Pulling fs layer
+4f4fb700ef54: Already exists
+4f4fb700ef54: Pull complete
+ad1180169676: Download complete
+86f385aa2c76: Download complete
+d035f39de3c6: Download complete
+df9831efb49c: Download complete
+df9831efb49c: Pull complete
+86f385aa2c76: Pull complete
+a7f73cdbf7c7: Download complete
+a7f73cdbf7c7: Pull complete
+d1a575944d54: Download complete
+d1a575944d54: Pull complete
+ad1180169676: Pull complete
+d035f39de3c6: Pull complete
+Digest: sha256:f1f0bcc2c524a3ced375fcb4d1ecb7aa371aa7070e112599aaca45cc02d0101b
+Status: Downloaded newer image for golang:1.26.9
+go version go1.26.9 linux/arm64
+ok  	quicknotes	1.013s
+go: downloading golang.org/x/vuln v1.1.4
+go: downloading golang.org/x/telemetry v0.0.0-20240522233618-39ace7a40ae7
+go: downloading golang.org/x/mod v0.22.0
+go: downloading golang.org/x/tools v0.29.0
+go: downloading golang.org/x/sync v0.10.0
+No vulnerabilities found.

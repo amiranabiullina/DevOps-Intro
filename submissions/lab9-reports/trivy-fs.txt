@@ -1,0 +1,389 @@
+2026-10-08T11:45:12Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-08T11:45:17Z	WARN	[pip] Unable to find python `site-packages` directory. License detection is skipped.	err="unable to find path to Python executable"
+2026-10-08T11:45:17Z	INFO	Suppressing dependencies for development and testing. To display them, try the '--include-dev-deps' flag.
+2026-10-08T11:45:17Z	INFO	Number of language-specific files	num=16
+2026-10-08T11:45:17Z	INFO	[poetry] Detecting vulnerabilities...
+2026-10-08T11:45:17Z	INFO	[pip] Detecting vulnerabilities...
+2026-10-08T11:45:17Z	INFO	[yarn] Detecting vulnerabilities...
+2026-10-08T11:45:17Z	INFO	[pipenv] Detecting vulnerabilities...
+2026-10-08T11:45:17Z	INFO	[gomod] Detecting vulnerabilities...
+2026-10-08T11:45:17Z	INFO	[python-pkg] Detecting vulnerabilities...
+
+.venv/lib/python3.11/site-packages/ansible_collections/azure/azcollection/requirements.txt (pip)
+================================================================================================
+Total: 1 (HIGH: 1, CRITICAL: 0)
+
+┌────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────┐
+│  Library   │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                          Title                           │
+├────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────┤
+│ azure-core │ CVE-2026-21226 │ HIGH     │ fixed  │ 1.28.0            │ 1.38.0        │ Azure Core is vulnerable to deserialization of untrusted │
+│            │                │          │        │                   │               │ data                                                     │
+│            │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2026-21226               │
+└────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/community/digitalocean/poetry.lock (poetry)
+==================================================================================================
+Total: 11 (HIGH: 11, CRITICAL: 0)
+
+┌──────────────┬─────────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────┐
+│   Library    │    Vulnerability    │ Severity │ Status │ Installed Version │                      Fixed Version                       │                            Title                            │
+├──────────────┼─────────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ ansible-core │ CVE-2024-8775       │ HIGH     │ fixed  │ 2.15.9            │ 2.17.6, 2.16.13                                          │ ansible-core: Exposure of Sensitive Information in Ansible  │
+│              │                     │          │        │                   │                                                          │ Vault Files Due to Improper...                              │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-8775                   │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-11332      │          │        │                   │ 2.16.19rc1, 2.18.18rc1, 2.19.11rc1, 2.20.7rc1, 2.21.1rc1 │ ansible-core: argument injection in ansible-galaxy role     │
+│              │                     │          │        │                   │                                                          │ install leads to arbitrary code execution...                │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-11332                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ cryptography │ CVE-2026-26007      │          │        │ 42.0.4            │ 46.0.5                                                   │ cryptography: cryptography Subgroup Attack Due to Missing   │
+│              │                     │          │        │                   │                                                          │ Subgroup Validation for SECT Curves...                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-26007                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-69249      │          │        │                   │ 49.0.0                                                   │ python-cryptography: python-cryptography: Duplicate         │
+│              │                     │          │        │                   │                                                          │ self-signed intermediates can cause exponential             │
+│              │                     │          │        │                   │                                                          │ path-building                                               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-69249                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-537c-gmf6-5ccf │          │        │                   │ 48.0.1                                                   │ Vulnerable OpenSSL included in cryptography wheels          │
+│              │                     │          │        │                   │                                                          │ https://github.com/advisories/GHSA-537c-gmf6-5ccf           │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ urllib3      │ CVE-2025-66418      │          │        │ 1.26.18           │ 2.6.0                                                    │ urllib3: urllib3: Unbounded decompression chain leads to    │
+│              │                     │          │        │                   │                                                          │ resource exhaustion                                         │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-66418                  │
+│              ├─────────────────────┤          │        │                   │                                                          ├─────────────────────────────────────────────────────────────┤
+│              │ CVE-2025-66471      │          │        │                   │                                                          │ urllib3: urllib3 Streaming API improperly handles highly    │
+│              │                     │          │        │                   │                                                          │ compressed data                                             │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-66471                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-21441      │          │        │                   │ 2.6.3                                                    │ urllib3: urllib3 vulnerable to decompression-bomb safeguard │
+│              │                     │          │        │                   │                                                          │ bypass when following HTTP redirects (streaming...          │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-21441                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-44431      │          │        │                   │ 2.7.0                                                    │ urllib3: urllib3: Information disclosure via cross-origin   │
+│              │                     │          │        │                   │                                                          │ redirects forwarding sensitive headers                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-44431                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97687      │          │        │                   │ 2.8.0                                                    │ urllib3: urllib3: Traffic interception via HTTPS proxy TLS  │
+│              │                     │          │        │                   │                                                          │ configuration override                                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-97687                  │
+│              ├─────────────────────┤          │        │                   │                                                          ├─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97689      │          │        │                   │                                                          │ urllib3: urllib3: Denial of Service via unbounded memory    │
+│              │                     │          │        │                   │                                                          │ allocation in chunk parser...                               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-97689                  │
+└──────────────┴─────────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/community/zabbix/molecule/requirements.txt (pip)
+=======================================================================================================
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌──────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│   Library    │ Vulnerability  │ Severity │ Status │ Installed Version │                      Fixed Version                       │                           Title                            │
+├──────────────┼────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ ansible-core │ CVE-2024-8775  │ HIGH     │ fixed  │ 2.15.11           │ 2.17.6, 2.16.13                                          │ ansible-core: Exposure of Sensitive Information in Ansible │
+│              │                │          │        │                   │                                                          │ Vault Files Due to Improper...                             │
+│              │                │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-8775                  │
+│              ├────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-11332 │          │        │                   │ 2.16.19rc1, 2.18.18rc1, 2.19.11rc1, 2.20.7rc1, 2.21.1rc1 │ ansible-core: argument injection in ansible-galaxy role    │
+│              │                │          │        │                   │                                                          │ install leads to arbitrary code execution...               │
+│              │                │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-11332                 │
+└──────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/cyberark/conjur/conjur-cloud-tools/conjurCloudTenant/conjur_cloud_tenant/poetry.lock (poetry)
+====================================================================================================================================================
+Total: 21 (HIGH: 18, CRITICAL: 3)
+
+┌──────────────┬─────────────────────┬──────────┬──────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│   Library    │    Vulnerability    │ Severity │  Status  │ Installed Version │ Fixed Version │                            Title                             │
+├──────────────┼─────────────────────┼──────────┼──────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ cryptography │ CVE-2026-26007      │ HIGH     │ fixed    │ 42.0.8            │ 46.0.5        │ cryptography: cryptography Subgroup Attack Due to Missing    │
+│              │                     │          │          │                   │               │ Subgroup Validation for SECT Curves...                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-26007                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-69249      │          │          │                   │ 49.0.0        │ python-cryptography: python-cryptography: Duplicate          │
+│              │                     │          │          │                   │               │ self-signed intermediates can cause exponential              │
+│              │                     │          │          │                   │               │ path-building                                                │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-69249                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ GHSA-537c-gmf6-5ccf │          │          │                   │ 48.0.1        │ Vulnerable OpenSSL included in cryptography wheels           │
+│              │                     │          │          │                   │               │ https://github.com/advisories/GHSA-537c-gmf6-5ccf            │
+├──────────────┼─────────────────────┤          ├──────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ ecdsa        │ CVE-2024-23342      │          │ affected │ 0.19.0            │               │ python-ecdsa: vulnerable to the Minerva attack               │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2024-23342                   │
+├──────────────┼─────────────────────┤          ├──────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pyasn1       │ CVE-2026-30922      │          │ fixed    │ 0.6.0             │ 0.6.3         │ pyasn1: pyasn1 Vulnerable to Denial of Service via Unbounded │
+│              │                     │          │          │                   │               │ Recursion                                                    │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-30922                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-59884      │          │          │                   │ 0.6.4         │ python-pyasn1: pyasn1: Denial of Service via crafted BER     │
+│              │                     │          │          │                   │               │ input                                                        │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-59884                   │
+│              ├─────────────────────┤          │          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-59885      │          │          │                   │               │ pyasn1: python-pyasn1: pyasn1: Denial of Service via crafted │
+│              │                     │          │          │                   │               │ ASN.1 OBJECT IDENTIFIER                                      │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-59885                   │
+│              ├─────────────────────┤          │          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-59886      │          │          │                   │               │ pyasn1: pyasn1: Denial of Service via crafted ASN.1 REAL     │
+│              │                     │          │          │                   │               │ values                                                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-59886                   │
+├──────────────┼─────────────────────┼──────────┤          ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pyjwt        │ CVE-2026-102268     │ CRITICAL │          │ 2.8.0             │ 2.14.0        │ PyJWT is a Python implementation of JSON Web Token           │
+│              │                     │          │          │                   │               │ standards. Prior to...                                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-102268                  │
+│              ├─────────────────────┼──────────┤          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-102267     │ HIGH     │          │                   │               │ pyjwt: pyjwt: Verification key substitution via unvalidated  │
+│              │                     │          │          │                   │               │ JWKS redirects                                               │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-102267                  │
+│              ├─────────────────────┤          │          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-102271     │          │          │                   │               │ pyjwt: PyJWT: Authentication bypass via acceptance of DER    │
+│              │                     │          │          │                   │               │ public keys as HMAC...                                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-102271                  │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-32597      │          │          │                   │ 2.12.0        │ pyjwt: PyJWT accepts unknown `crit` header extensions (RFC   │
+│              │                     │          │          │                   │               │ 7515 §4.1.11 MUST violation)...                              │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-32597                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-48526      │          │          │                   │ 2.13.0        │ python-pyjwt: PyJWT: Authentication bypass due to forged     │
+│              │                     │          │          │                   │               │ JSON Web Tokens                                              │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-48526                   │
+├──────────────┼─────────────────────┼──────────┤          ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ python-jose  │ CVE-2024-33663      │ CRITICAL │          │ 3.3.0             │ 3.4.0         │ python-jose: algorithm confusion with OpenSSH ECDSA keys and │
+│              │                     │          │          │                   │               │ other key formats                                            │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2024-33663                   │
+│              ├─────────────────────┤          ├──────────┤                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-85394      │          │ affected │                   │               │ jose: python-jose: python-jose through 3.5.0 Algorithm       │
+│              │                     │          │          │                   │               │ Confusion via DER-encoded Public Key as...                   │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-85394                   │
+├──────────────┼─────────────────────┼──────────┼──────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ urllib3      │ CVE-2025-66418      │ HIGH     │ fixed    │ 1.26.19           │ 2.6.0         │ urllib3: urllib3: Unbounded decompression chain leads to     │
+│              │                     │          │          │                   │               │ resource exhaustion                                          │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-66418                   │
+│              ├─────────────────────┤          │          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2025-66471      │          │          │                   │               │ urllib3: urllib3 Streaming API improperly handles highly     │
+│              │                     │          │          │                   │               │ compressed data                                              │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2025-66471                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-21441      │          │          │                   │ 2.6.3         │ urllib3: urllib3 vulnerable to decompression-bomb safeguard  │
+│              │                     │          │          │                   │               │ bypass when following HTTP redirects (streaming...           │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-21441                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-44431      │          │          │                   │ 2.7.0         │ urllib3: urllib3: Information disclosure via cross-origin    │
+│              │                     │          │          │                   │               │ redirects forwarding sensitive headers                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-44431                   │
+│              ├─────────────────────┤          │          │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97687      │          │          │                   │ 2.8.0         │ urllib3: urllib3: Traffic interception via HTTPS proxy TLS   │
+│              │                     │          │          │                   │               │ configuration override                                       │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-97687                   │
+│              ├─────────────────────┤          │          │                   │               ├──────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97689      │          │          │                   │               │ urllib3: urllib3: Denial of Service via unbounded memory     │
+│              │                     │          │          │                   │               │ allocation in chunk parser...                                │
+│              │                     │          │          │                   │               │ https://avd.aquasec.com/nvd/cve-2026-97689                   │
+└──────────────┴─────────────────────┴──────────┴──────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/grafana/grafana/Pipfile.lock (pipenv)
+============================================================================================
+Total: 8 (HIGH: 8, CRITICAL: 0)
+
+┌──────────────┬─────────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│   Library    │    Vulnerability    │ Severity │ Status │ Installed Version │                      Fixed Version                       │                           Title                            │
+├──────────────┼─────────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ ansible-core │ CVE-2024-8775       │ HIGH     │ fixed  │ 2.17.4            │ 2.17.6, 2.16.13                                          │ ansible-core: Exposure of Sensitive Information in Ansible │
+│              │                     │          │        │                   │                                                          │ Vault Files Due to Improper...                             │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-8775                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-11332      │          │        │                   │ 2.16.19rc1, 2.18.18rc1, 2.19.11rc1, 2.20.7rc1, 2.21.1rc1 │ ansible-core: argument injection in ansible-galaxy role    │
+│              │                     │          │        │                   │                                                          │ install leads to arbitrary code execution...               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-11332                 │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ black        │ CVE-2026-32274      │          │        │ 24.8.0            │ 26.3.1                                                   │ black: Black: Arbitrary file writes from unsanitized user  │
+│              │                     │          │        │                   │                                                          │ input in cache file...                                     │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-32274                 │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ cryptography │ CVE-2026-26007      │          │        │ 43.0.1            │ 46.0.5                                                   │ cryptography: cryptography Subgroup Attack Due to Missing  │
+│              │                     │          │        │                   │                                                          │ Subgroup Validation for SECT Curves...                     │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-26007                 │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-69249      │          │        │                   │ 49.0.0                                                   │ python-cryptography: python-cryptography: Duplicate        │
+│              │                     │          │        │                   │                                                          │ self-signed intermediates can cause exponential            │
+│              │                     │          │        │                   │                                                          │ path-building                                              │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-69249                 │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│              │ GHSA-537c-gmf6-5ccf │          │        │                   │ 48.0.1                                                   │ Vulnerable OpenSSL included in cryptography wheels         │
+│              │                     │          │        │                   │                                                          │ https://github.com/advisories/GHSA-537c-gmf6-5ccf          │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ setuptools   │ CVE-2024-6345       │          │        │ 69.0.3            │ 70.0.0                                                   │ pypa/setuptools: Remote code execution via download        │
+│              │                     │          │        │                   │                                                          │ functions in the package_index module in...                │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-6345                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│              │ CVE-2025-47273      │          │        │                   │ 78.1.1                                                   │ setuptools: Path Traversal Vulnerability in setuptools     │
+│              │                     │          │        │                   │                                                          │ PackageIndex                                               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-47273                 │
+└──────────────┴─────────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/grafana/grafana/yarn.lock (yarn)
+=======================================================================================
+Total: 22 (HIGH: 22, CRITICAL: 0)
+
+┌─────────────────┬─────────────────────┬──────────┬──────────┬───────────────────┬─────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│     Library     │    Vulnerability    │ Severity │  Status  │ Installed Version │                      Fixed Version                      │                            Title                             │
+├─────────────────┼─────────────────────┼──────────┼──────────┼───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ brace-expansion │ CVE-2026-102276     │ HIGH     │ fixed    │ 1.1.11            │ 5.0.10, 3.0.7, 2.1.5, 1.1.19                            │ brace-expansion: brace-expansion: Denial of Service via      │
+│                 │                     │          │          │                   │                                                         │ stack exhaustion from crafted brace patterns...              │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-102276                  │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-102278     │          │          │                   │ 5.0.11, 3.0.8, 2.1.6, 1.1.20                            │ brace-expansion: brace-expansion: Denial of Service via      │
+│                 │                     │          │          │                   │                                                         │ uncontrolled recursion in nested brace patterns...           │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-102278                  │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-13149      │          │          │                   │ 5.0.7, 1.1.16, 2.1.2                                    │ brace-expansion: Brace-expansion: Denial of Service due to   │
+│                 │                     │          │          │                   │                                                         │ exponential-time complexity                                  │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-13149                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-14257      │          │          │                   │ 5.0.8, 3.0.3, 2.1.3, 1.1.17                             │ brace-expansion: Brace-expansion: Denial of Service via      │
+│                 │                     │          │          │                   │                                                         │ memory exhaustion in expand() function                       │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-14257                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-69152      │          │          │                   │ 1.1.18, 2.1.4, 3.0.6, 5.0.9                             │ brace-expansion: DoS via unbounded intermediate arrays,      │
+│                 │                     │          │          │                   │                                                         │ bypassing the CVE-2026-14257 mitigation                      │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-69152                   │
+├─────────────────┼─────────────────────┤          ├──────────┼───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ braces          │ CVE-2026-93687      │          │ affected │ 3.0.3             │                                                         │ braces: braces: Denial of Service via Stack Overflow from    │
+│                 │                     │          │          │                   │                                                         │ Deeply Nested Patterns...                                    │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-93687                   │
+├─────────────────┼─────────────────────┤          ├──────────┼───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ flatted         │ CVE-2026-32141      │          │ fixed    │ 2.0.2             │ 3.4.0                                                   │ flatted: flatted: Unbounded recursion DoS in parse() revive  │
+│                 │                     │          │          │                   │                                                         │ phase                                                        │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-32141                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-33228      │          │          │                   │ 3.4.2                                                   │ flatted: Flatted: Prototype pollution vulnerability allows   │
+│                 │                     │          │          │                   │                                                         │ arbitrary code execution via crafted JSON....                │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-33228                   │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ js-yaml         │ CVE-2026-59869      │          │          │ 3.14.1            │ 3.15.0, 4.3.0                                           │ js-yaml: js-yaml: Denial of Service via crafted YAML         │
+│                 │                     │          │          │                   │                                                         │ documents                                                    │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-59869                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-84375      │          │          │                   │ 4.3.2, 3.15.2                                           │ js-yaml: js-yaml: Denial of Service vulnerability in YAML    │
+│                 │                     │          │          │                   │                                                         │ parsing                                                      │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-84375                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ GHSA-5p4m-2wfm-xmqj │          │          │                   │ 4.3.1, 3.15.1                                           │ JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x │
+│                 │                     │          │          │                   │                                                         │ and 4.x) — CVE-2026-59870...                                 │
+│                 │                     │          │          │                   │                                                         │ https://github.com/advisories/GHSA-5p4m-2wfm-xmqj            │
+│                 ├─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-59869      │          │          │ 4.1.0             │ 3.15.0, 4.3.0                                           │ js-yaml: js-yaml: Denial of Service via crafted YAML         │
+│                 │                     │          │          │                   │                                                         │ documents                                                    │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-59869                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-84375      │          │          │                   │ 4.3.2, 3.15.2                                           │ js-yaml: js-yaml: Denial of Service vulnerability in YAML    │
+│                 │                     │          │          │                   │                                                         │ parsing                                                      │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-84375                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ GHSA-5p4m-2wfm-xmqj │          │          │                   │ 4.3.1, 3.15.1                                           │ JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x │
+│                 │                     │          │          │                   │                                                         │ and 4.x) — CVE-2026-59870...                                 │
+│                 │                     │          │          │                   │                                                         │ https://github.com/advisories/GHSA-5p4m-2wfm-xmqj            │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ linkify-it      │ CVE-2026-48801      │          │          │ 4.0.1             │ 5.0.1                                                   │ linkify-it: linkify-it: Denial of Service via algorithmic    │
+│                 │                     │          │          │                   │                                                         │ complexity vulnerability                                     │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-48801                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-59887      │          │          │                   │ 5.0.2                                                   │ linkify-it: linkify-it: Denial of Service via crafted        │
+│                 │                     │          │          │                   │                                                         │ mailto: links                                                │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-59887                   │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ lodash          │ CVE-2026-4800       │          │          │ 4.17.21           │ 4.18.0                                                  │ lodash: lodash: Arbitrary code execution via untrusted input │
+│                 │                     │          │          │                   │                                                         │ in template imports                                          │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-4800                    │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ minimatch       │ CVE-2026-26996      │          │          │ 3.1.2             │ 10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3 │ minimatch: minimatch: Denial of Service via specially        │
+│                 │                     │          │          │                   │                                                         │ crafted glob patterns                                        │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-26996                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-27903      │          │          │                   │ 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3 │ minimatch: minimatch: Denial of Service due to unbounded     │
+│                 │                     │          │          │                   │                                                         │ recursive backtracking via crafted...                        │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-27903                   │
+│                 ├─────────────────────┤          │          │                   ├─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                 │ CVE-2026-27904      │          │          │                   │ 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4 │ minimatch: Minimatch: Denial of Service via catastrophic     │
+│                 │                     │          │          │                   │                                                         │ backtracking in glob expressions                             │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-27904                   │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ picomatch       │ CVE-2026-33671      │          │          │ 2.3.1             │ 4.0.4, 3.0.2, 2.3.2                                     │ picomatch: Picomatch: Regular Expression Denial of Service   │
+│                 │                     │          │          │                   │                                                         │ via crafted extglob patterns                                 │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2026-33671                   │
+├─────────────────┼─────────────────────┤          │          ├───────────────────┼─────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ yaml            │ CVE-2023-2251       │          │          │ 2.2.1             │ 2.2.2                                                   │ Uncaught Exception in GitHub repository eemeli/yaml prior to │
+│                 │                     │          │          │                   │                                                         │ 2.0.0-5.                                                     │
+│                 │                     │          │          │                   │                                                         │ https://avd.aquasec.com/nvd/cve-2023-2251                    │
+└─────────────────┴─────────────────────┴──────────┴──────────┴───────────────────┴─────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────┘
+
+.venv/lib/python3.11/site-packages/ansible_collections/netbox/netbox/poetry.lock (poetry)
+=========================================================================================
+Total: 16 (HIGH: 15, CRITICAL: 1)
+
+┌──────────────┬─────────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────────────────────────────┬─────────────────────────────────────────────────────────────┐
+│   Library    │    Vulnerability    │ Severity │ Status │ Installed Version │                      Fixed Version                       │                            Title                            │
+├──────────────┼─────────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ aiohttp      │ CVE-2025-69223      │ HIGH     │ fixed  │ 3.10.5            │ 3.13.3                                                   │ aiohttp: AIOHTTP's HTTP Parser auto_decompress feature is   │
+│              │                     │          │        │                   │                                                          │ vulnerable to zip bomb                                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-69223                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-69244      │          │        │                   │ 3.14.3                                                   │ aiohttp: AIOHTTP: Denial of Service via malformed HTTP      │
+│              │                     │          │        │                   │                                                          │ responses                                                   │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-69244                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ ansible-core │ CVE-2024-8775       │          │        │ 2.17.3            │ 2.17.6, 2.16.13                                          │ ansible-core: Exposure of Sensitive Information in Ansible  │
+│              │                     │          │        │                   │                                                          │ Vault Files Due to Improper...                              │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2024-8775                   │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-11332      │          │        │                   │ 2.16.19rc1, 2.18.18rc1, 2.19.11rc1, 2.20.7rc1, 2.21.1rc1 │ ansible-core: argument injection in ansible-galaxy role     │
+│              │                     │          │        │                   │                                                          │ install leads to arbitrary code execution...                │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-11332                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ black        │ CVE-2026-32274      │          │        │ 24.8.0            │ 26.3.1                                                   │ black: Black: Arbitrary file writes from unsanitized user   │
+│              │                     │          │        │                   │                                                          │ input in cache file...                                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-32274                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ cryptography │ CVE-2026-26007      │          │        │ 43.0.1            │ 46.0.5                                                   │ cryptography: cryptography Subgroup Attack Due to Missing   │
+│              │                     │          │        │                   │                                                          │ Subgroup Validation for SECT Curves...                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-26007                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-69249      │          │        │                   │ 49.0.0                                                   │ python-cryptography: python-cryptography: Duplicate         │
+│              │                     │          │        │                   │                                                          │ self-signed intermediates can cause exponential             │
+│              │                     │          │        │                   │                                                          │ path-building                                               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-69249                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ GHSA-537c-gmf6-5ccf │          │        │                   │ 48.0.1                                                   │ Vulnerable OpenSSL included in cryptography wheels          │
+│              │                     │          │        │                   │                                                          │ https://github.com/advisories/GHSA-537c-gmf6-5ccf           │
+├──────────────┼─────────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ deepdiff     │ CVE-2025-58367      │ CRITICAL │        │ 8.0.1             │ 8.6.1                                                    │ DeepDiff is a project focused on Deep Difference and search │
+│              │                     │          │        │                   │                                                          │ of any...                                                   │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-58367                  │
+│              ├─────────────────────┼──────────┤        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-33155      │ HIGH     │        │                   │ 8.6.2                                                    │ deepdiff: DeepDiff: Denial of Service via unrestricted      │
+│              │                     │          │        │                   │                                                          │ memory allocation in pickle unpickler...                    │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-33155                  │
+├──────────────┼─────────────────────┤          │        ├───────────────────┼──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ urllib3      │ CVE-2025-66418      │          │        │ 2.2.2             │ 2.6.0                                                    │ urllib3: urllib3: Unbounded decompression chain leads to    │
+│              │                     │          │        │                   │                                                          │ resource exhaustion                                         │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-66418                  │
+│              ├─────────────────────┤          │        │                   │                                                          ├─────────────────────────────────────────────────────────────┤
+│              │ CVE-2025-66471      │          │        │                   │                                                          │ urllib3: urllib3 Streaming API improperly handles highly    │
+│              │                     │          │        │                   │                                                          │ compressed data                                             │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2025-66471                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-21441      │          │        │                   │ 2.6.3                                                    │ urllib3: urllib3 vulnerable to decompression-bomb safeguard │
+│              │                     │          │        │                   │                                                          │ bypass when following HTTP redirects (streaming...          │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-21441                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-44431      │          │        │                   │ 2.7.0                                                    │ urllib3: urllib3: Information disclosure via cross-origin   │
+│              │                     │          │        │                   │                                                          │ redirects forwarding sensitive headers                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-44431                  │
+│              ├─────────────────────┤          │        │                   ├──────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97687      │          │        │                   │ 2.8.0                                                    │ urllib3: urllib3: Traffic interception via HTTPS proxy TLS  │
+│              │                     │          │        │                   │                                                          │ configuration override                                      │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-97687                  │
+│              ├─────────────────────┤          │        │                   │                                                          ├─────────────────────────────────────────────────────────────┤
+│              │ CVE-2026-97689      │          │        │                   │                                                          │ urllib3: urllib3: Denial of Service via unbounded memory    │
+│              │                     │          │        │                   │                                                          │ allocation in chunk parser...                               │
+│              │                     │          │        │                   │                                                          │ https://avd.aquasec.com/nvd/cve-2026-97689                  │
+└──────────────┴─────────────────────┴──────────┴────────┴───────────────────┴──────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
