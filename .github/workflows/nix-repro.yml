@@ -12,18 +12,11 @@ jobs:
   build-a:
     name: nix build .#docker (runner A)
     runs-on: ubuntu-24.04
-    env:
-      SOURCE_DATE_EPOCH: "1700000000"   # deliberate divergence: only runner A gets a different timestamp
     outputs:
       digest: ${{ steps.digest.outputs.digest }}
     steps:
       - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
       - uses: DeterminateSystems/nix-installer-action@3138316df39ed29be04236d7ffc686fa525866aa # v23
-      - name: Inject SOURCE_DATE_EPOCH into image timestamp
-        run: |
-          created="$(date -u -d "@${SOURCE_DATE_EPOCH}" +%Y-%m-%dT%H:%M:%SZ)"
-          sed -i "s|tag = quicknotes.version;|tag = quicknotes.version; created = \"${created}\";|" flake.nix
-          grep -n created flake.nix
       - run: nix build .#docker -L
       - id: digest
         run: |
